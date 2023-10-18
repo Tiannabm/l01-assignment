@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import './index.css';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const myName = React.createElement('h1', null, 'Tianna');
+const myFuture = React.createElement('p', null, 'Aspiring Software Developer');
+
+const myTraits = [ 'Kind', 'Smart', 'Amazing'];
+myTraits.map(('Kind', 'Smart', 'Amazing') )
+// const myTraits1 = React.createElement('li', null, 'Kind');
+// const myTraits2 = React.createElement('li', null, 'Smart');
+// const myTraits3 = React.createElement('li', null, 'Amazing');
+
+const container = React.createElement('div', "header", [myName, myFuture]);
+
+
+ReactDOM.render(
+  container, 
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
